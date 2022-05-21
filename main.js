@@ -7,7 +7,8 @@ const arr = JSON.parse(localStorage.getItem('todo'))|| [];
 function init(){
     res.innerHTML = ""
     for(todos of arr){
-        res.innerHTML += `<p>${todos}</p>`
+        var pos = arr.indexOf(todos)
+        res.innerHTML += `<p>${todos}</p><a onclick="dele(${pos})">X</a>`
     }
 }
 
@@ -24,5 +25,12 @@ function addTodo(){
 function save(){
    localStorage.setItem('todo', JSON.stringify(arr))
 };
+
+function dele(pos){
+    arr.splice(pos, 1)
+    init()
+    save()
+}
+
 
 btn.onclick = addTodo
