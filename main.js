@@ -8,7 +8,9 @@ function init(){
     res.innerHTML = ""
     for(todos of arr){
         var pos = arr.indexOf(todos)
-        res.innerHTML += `<p>${todos}</p><a onclick="dele(${pos})">X</a>`
+        res.innerHTML += `<div class="res" id="res">
+        <p>${todos}</p><a onclick="dele(${pos})">X</a>
+        </div>`
     }
 }
 

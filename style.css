@@ -1,8 +1,5 @@
-* {
-    background-color: rgb(70, 142, 236);
-}
 header {
-    color: white;
+    
     text-align: center;
 }
 
@@ -20,20 +17,15 @@ header {
     align-items: center;
     justify-content: center;
     background-color: white;
+    margin: 10PX;
 }
 .res{
-    background-color: white;
-    text-align: center;
-    width: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
 }
-.res p{
-    background-color: orange;
-}
-.res a {
-    outline: none;
-    text-decoration: none;
+
+a{
     cursor: pointer;
-    position: relative;
-    padding: 20px 5px 3px 340px;
-    background-color: white;
+    text-decoration: none;
 }
